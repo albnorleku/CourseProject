@@ -1,5 +1,7 @@
 package com.roiacademy.classExample;
 
+import com.roiacademy.nestedClasses.ClassA;
+
 public class Figura {
     public static void main(String[] args) {
         Point startingPoint = new Point(1, 3);
@@ -19,5 +21,6 @@ public class Figura {
 
         // branch test arjanit isufi
         // abetare
+
     }
 }

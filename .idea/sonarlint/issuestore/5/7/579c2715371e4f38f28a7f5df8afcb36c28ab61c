@@ -1,0 +1,12 @@
+
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃÜŞûÿÿÿÿ
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¬®÷½ÿÿÿÿÿ8™ÊÒÆ†.
+Gsquid:S1068")Remove this unused "breed" private field.(ı»Ï±8•í˜Æ†.
+Jsquid:S1068"'Remove this unused "age" private field.(Æ†´¦şÿÿÿÿ8•í˜Æ†.
+Nsquid:S1444	"+Make this "public static test2" field final(Ñ­ş»ıÿÿÿÿ8…®ÈÆ†.
+‹"squid:ClassVariableVisibilityCheck	"QMake test2 a static final constant or non-public and provide accessors if needed.(Ñ­ş»ıÿÿÿÿ8…®ÈÆ†.
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(º¼Åøÿÿÿÿ8§‘¡È†.
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¬®÷½ÿÿÿÿÿ8ş©ÌÆ†.
+Wsquid:S3400!"9Remove this method and declare a constant for this value.(ßÃõÀ8ú ƒç†.

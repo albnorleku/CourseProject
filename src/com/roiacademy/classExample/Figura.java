@@ -11,6 +11,8 @@ public class Figura {
         System.out.println(katrori1.getPerimeter());
 
         Rectangle katrori2 = new Rectangle(20, 30);
+        katrori2.height = 25;
+        System.out.println(katrori2.height);
 
     }
 }

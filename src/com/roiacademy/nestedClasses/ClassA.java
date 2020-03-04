@@ -7,7 +7,6 @@ public class ClassA {
         this.name = name;
     }
 
-
     /**
      * Static Inner Class.
      */
@@ -34,6 +33,7 @@ public class ClassA {
      * Inner Class.
      */
     public class InnerClass {
+        //private static String test; //cant have static declarations.
         private String name;
 
         public void setName(String name) {
@@ -67,7 +67,6 @@ public class ClassA {
 
         System.out.println(classA.name);
         System.out.println(innerClass.name);
-
 
         innerClass.setAllNames("2 inner Names");
         innerClass.printAllName();

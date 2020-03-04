@@ -1,10 +1,10 @@
 package com.roiacademy.classExample;
 
-public class Rectangle {
+public class Rectangle implements Shape {
 
     public int width = 0;
     public int height = 0;
-    public Point origin;
+    public Point origin;  //has - a
 
     // four constructors
     public Rectangle() {
@@ -30,12 +30,15 @@ public class Rectangle {
         origin.setY(y);
     }
 
-    // a method for computing the area of the rectangle
-    public int getArea() {
-        return width * height;
+    @Override
+    public double calculatePerimeter() {
+        return 2 * ((double)width + height);
     }
 
-    public int getPerimeter() {
-        return 2 * (width + height);
+    @Override
+    public double calculateSiperfaqja() {
+        return (double)width * height;
     }
+
+
 }

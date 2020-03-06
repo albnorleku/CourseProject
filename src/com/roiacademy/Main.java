@@ -1,7 +1,5 @@
 package com.roiacademy;
 
-import com.roiacademy.newPackage.Dog;
-
 public class Main {
     protected String test;
 

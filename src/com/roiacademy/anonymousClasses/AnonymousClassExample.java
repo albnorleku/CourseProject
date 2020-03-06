@@ -1,6 +1,6 @@
 package com.roiacademy.anonymousClasses;
 
-import com.roiacademy.newPackage.Dog;
+import com.roiacademy.inheritance.Dog;
 
 public class AnonymousClassExample {
 
@@ -30,7 +30,7 @@ public class AnonymousClassExample {
             }
         };
 
-        Dog rexi = new Dog() {
+        Dog rexi = new Dog(23, 4) {
             @Override
             public void setName(String name) {
                 super.setName("rex_" + name);

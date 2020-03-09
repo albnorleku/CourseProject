@@ -1,6 +1,8 @@
 package com.roiacademy.inheritance;
 
 
+import com.roiacademy.exceptions.AnimalException;
+
 public class Animal {
     private int age;
     private int nrOfFeet;
@@ -11,7 +13,7 @@ public class Animal {
         this.nrOfFeet = nrOfFeet;
     }
 
-    protected void setAge(int age) {
+    protected void setAge(int age) throws AnimalException {
         this.age = age;
     }
 

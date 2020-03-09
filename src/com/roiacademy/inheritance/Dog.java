@@ -1,5 +1,7 @@
 package com.roiacademy.inheritance;
 
+import com.roiacademy.exceptions.AnimalException;
+
 public class Dog extends Animal {
 
     private String name;
@@ -51,9 +53,19 @@ public class Dog extends Animal {
         System.out.println("Qeni leh!");
     }
 
-    public void setAge(int nr) {
+    public void setAge(int nr) throws AnimalException {
+        if (nr < 0) {
+            throw new AnimalException("Age can not be negative!", getName());
+        }
         nr += 1;
         super.setAge(nr);
     }
 
+    public boolean equals(Object object) {
+        if (object instanceof Dog) {
+            Dog dog = (Dog) object;
+            return getName().equalsIgnoreCase(dog.getName());
+        }
+        return false;
+    }
 }

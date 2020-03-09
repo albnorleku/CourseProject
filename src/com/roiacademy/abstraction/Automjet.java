@@ -27,5 +27,5 @@ public abstract class Automjet implements Trup {
         this.gear = gear;
     }
 
-    protected abstract void ndrroShpejtsit(int gear);
+    protected abstract void ndrroShpejtsit(int gear) ;
 }

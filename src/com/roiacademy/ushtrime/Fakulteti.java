@@ -7,7 +7,13 @@ public class Fakulteti {
 
     private int index = 0;
 
-    public Fakulteti(String drejtimi, int nrM) {
+    public Fakulteti(String drejtimi, int nrM) throws  MesimdhenesiException{
+        if(drejtimi.trim().length() == 0 || drejtimi.isEmpty()) {
+            throw new MesimdhenesiException("Drejtimi i fakulltetit nuk mund te jete i zbrazet !");
+        }
+        if(nrM < 0) {
+            throw new MesimdhenesiException("Numri i mesimdhenesve nuk mund te jete negtive ");
+        }
         this.drejtimi = drejtimi;
         this.mesimdhenesit = new Mesimdhenesi[nrM];
     }
@@ -55,11 +61,11 @@ public class Fakulteti {
 
     public static void main(String[] args) {
 
-        Fakulteti fakulteti = new Fakulteti("JAVA", 10);
-        Mesimdhenesi mesimdhenesi = new Asistenti("Filan", 1992, "Stomatolog", "me ngjit bllomba");
-        Mesimdhenesi mesimdhenesi2 = new Profesori("Fisteki", 1980, "Gjinekolog", "me nxjer ...");
-
         try {
+            Fakulteti fakulteti = new Fakulteti("JAVA", 10);
+            Mesimdhenesi mesimdhenesi = new Asistenti("Filan", 1992, "Stomatolog", "me ngjit bllomba");
+            Mesimdhenesi mesimdhenesi2 = new Profesori("Fisteki", 1980, "Gjinekolog", "me nxjer ...");
+
             fakulteti.shtoMesimdhenesin(mesimdhenesi);
             fakulteti.shtoMesimdhenesin(mesimdhenesi2);
             Mesimdhenesi mesimdhenesiMeIVjeter = fakulteti.mesimdhenesiMeIVjeter();

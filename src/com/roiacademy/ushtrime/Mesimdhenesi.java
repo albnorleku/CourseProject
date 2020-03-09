@@ -5,8 +5,17 @@ public abstract class Mesimdhenesi implements Angazhohet {
     private int vitiILindjes;
     private String fushaEStudimit;
 
-    public Mesimdhenesi(String emri, int vitiILindjes, String fushaEStudimit) {
-        //todo handle exceptions
+    public Mesimdhenesi(String emri, int vitiILindjes, String fushaEStudimit) throws  MesimdhenesiException{
+       if(emri.trim().length() == 0 || emri.isEmpty()) {
+           throw new MesimdhenesiException("Emri nuk mund te jete i zbrazet !");
+       }
+       if(vitiILindjes < 0) {
+           throw new MesimdhenesiException("VitiLindjes nuk mund te jete negativ");
+       }
+
+       if(fushaEStudimit.trim().length() == 0 || fushaEStudimit.isEmpty()) {
+           throw  new MesimdhenesiException("Fusha Studimit nuk mund te jete e zbrazet");
+       }
         this.emri = emri;
         this.vitiILindjes = vitiILindjes;
         this.fushaEStudimit = fushaEStudimit;
@@ -20,7 +29,10 @@ public abstract class Mesimdhenesi implements Angazhohet {
         return vitiILindjes;
     }
 
-    public void setVitiILindjes(int vitiILindjes) {
+    public void setVitiILindjes(int vitiILindjes) throws MesimdhenesiException {
+        if(vitiILindjes < 0) {
+            throw new MesimdhenesiException("VitiLindjes nuk mund te jete negativ");
+        }
         this.vitiILindjes = vitiILindjes;
     }
 
@@ -28,7 +40,10 @@ public abstract class Mesimdhenesi implements Angazhohet {
         return fushaEStudimit;
     }
 
-    public void setFushaEStudimit(String fushaEStudimit) {
+    public void setFushaEStudimit(String fushaEStudimit) throws MesimdhenesiException {
+        if(fushaEStudimit.trim().length() == 0 || fushaEStudimit.isEmpty()) {
+            throw  new MesimdhenesiException("Fusha Studimit nuk mund te jete e zbrazet");
+        }
         this.fushaEStudimit = fushaEStudimit;
     }
 

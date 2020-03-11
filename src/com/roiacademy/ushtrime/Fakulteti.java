@@ -44,11 +44,11 @@ public class Fakulteti {
     public Mesimdhenesi mesimdhenesiMeIVjeter() {
         Mesimdhenesi mesimdhenesiMeIVjeter = null;
         for (int i = 0; i < index; i++ ) {
-            if (mesimdhenesit[i].mentoron()) {
-                if (mesimdhenesiMeIVjeter == null || mesimdhenesit[i].getVitiILindjes() >= mesimdhenesiMeIVjeter.getVitiILindjes()) {
+//            if (mesimdhenesit[i].mentoron()) {
+                if (mesimdhenesiMeIVjeter == null || mesimdhenesit[i].getVitiILindjes() <= mesimdhenesiMeIVjeter.getVitiILindjes()) {
                     mesimdhenesiMeIVjeter = mesimdhenesit[i];
                 }
-            }
+//            }
         }
         return mesimdhenesiMeIVjeter;
     }
@@ -66,6 +66,8 @@ public class Fakulteti {
             System.out.println("Mesimdhenesi me i vjeter " + mesimdhenesiMeIVjeter);
 
             fakulteti.shtypAngazhimiFusha("Ushtrime", "Stomatolog");
+
+
         } catch (MesimdhenesiException e) {
             System.out.println(e.getMessage());
         }

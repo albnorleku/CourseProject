@@ -1,11 +1,15 @@
 package com.roiacademy.ushtrime;
 
+import java.util.List;
+
 public class Fakulteti {
     private String drejtimi;
 
     private Mesimdhenesi [] mesimdhenesit;
 
     private int index = 0;
+
+    private List<Mesimdhenesi> mesimdhenesiList;
 
     public Fakulteti(String drejtimi, int nrM) {
         this.drejtimi = drejtimi;
@@ -51,6 +55,10 @@ public class Fakulteti {
 //            }
         }
         return mesimdhenesiMeIVjeter;
+    }
+
+    public Mesimdhenesi [] getMesimdhenesit() {
+        return mesimdhenesit;
     }
 
     public static void main(String[] args) {

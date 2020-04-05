@@ -4,16 +4,18 @@ import com.roiacademy.ushtrime.*;
 
 import java.io.*;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BufferedReaderTest {
+    public static final String dbFile = "C:\\Users\\albno\\Desktop\\IO ushtrime\\FakultetiDB.txt";
 
     public static void main(String[] args) {
         Fakulteti fakulteti = new Fakulteti("CSE", 15);
-        String dbFile = "C:\\Users\\albno\\Desktop\\IO ushtrime\\FakultetiDB.txt";
         Mesimdhenesi [] mesimdhenesit = getMesimdhenesit(dbFile);
 
         try {
-            if(mesimdhenesit != null) {
+            if (mesimdhenesit != null) {
                 for (Mesimdhenesi mesimdhenesi : mesimdhenesit) {
                     if (mesimdhenesi != null) {
                         fakulteti.shtoMesimdhenesin(mesimdhenesi);
@@ -36,6 +38,8 @@ public class BufferedReaderTest {
             Mesimdhenesi [] mesimdhenesitNeFile = new Mesimdhenesi[15];
             int iteratorMesimdhenseve = 0;
             String line;
+            List<Mesimdhenesi> mesimdhenesit2 = new ArrayList<>();
+
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
                 System.out.println("=======================");
@@ -52,6 +56,7 @@ public class BufferedReaderTest {
                     mesimdhenesi = new Profesori(emri, vitiILindjes, fushaEStudimit, angazhimi);
                 }
                 mesimdhenesitNeFile[iteratorMesimdhenseve++] = mesimdhenesi;
+                //mesimdhenesit2.add(mesimdhenesi);
             }
             return mesimdhenesitNeFile;
         } catch (FileNotFoundException f){

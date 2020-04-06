@@ -15,7 +15,7 @@ public class FakultetiTest {
         Mesimdhenesi mesimdhenesi2 = new Profesori("Fisteki", 1980, "Gjinekolog", "me nxjer ...");
 
         try {
-            Mesimdhenesi mesimdhenesiMeIVjeter = fakulteti.mesimdhenesiMeIVjeter();
+            //Mesimdhenesi mesimdhenesiMeIVjeter = fakulteti.mesimdhenesiMeIVjeter();
             //System.out.println("Mesimdhenesi me i vjeter " + mesimdhenesiMeIVjeter);
 
             //fakulteti.shtypAngazhimiFusha("Ushtrime", "Stomatolog");

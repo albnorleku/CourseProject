@@ -1,6 +1,7 @@
 package com.roiacademy.javaIO;
 
 import com.roiacademy.ushtrime.*;
+import org.junit.runner.RunWith;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -13,6 +14,10 @@ public class BufferedReaderTest {
     public static void main(String[] args) {
         Fakulteti fakulteti = new Fakulteti("CSE", 15);
         Mesimdhenesi [] mesimdhenesit = getMesimdhenesit(dbFile);
+
+        /*Runnable runnable = () -> {
+
+        };*/
 
         try {
             if (mesimdhenesit != null) {

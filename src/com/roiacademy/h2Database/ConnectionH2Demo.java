@@ -29,6 +29,12 @@ public class ConnectionH2Demo {
                     " age INTEGER, " +
                     " PRIMARY KEY ( id ))";*/
 
+            /*String sql =  "CREATE TABLE   course_classes " +
+                    "(id INTEGER auto_increment not NULL, " +
+                    " name VARCHAR(255), " +
+                    " maxStudents INTEGER, " +
+                    " PRIMARY KEY ( id ))";*/
+
             String sql = "INSERT INTO course_users (first_name, last_name, age) VALUES ('Test3', 'test_last3', '65')";
 
             //String sql = "ALTER TABLE course_users ALTER COLUMN id INT auto_increment";

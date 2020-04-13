@@ -1,5 +1,9 @@
 package com.roiacademy.concurrency;
 
+import com.roiacademy.h2Database.model.CourseUsers;
+
+import java.util.Optional;
+
 public class ConcurrencyProgramTest {
     public static void main(String[] args) {
         RunnableConcurrencyProgram runnableConcurrencyProgram = new RunnableConcurrencyProgram("t-1", 100);
@@ -38,5 +42,15 @@ public class ConcurrencyProgramTest {
         });
         thread.start();
         thread.setName("noli's thread");
+
+        // OPTIONAL java.
+        Optional<CourseUsers> courseUsers = Optional.empty();
+        //CourseUsers courseUsers = null;
+
+        courseUsers.ifPresent(cu -> System.out.println(cu.getFirstName()));
+        String firstName = null;
+        if (courseUsers.isPresent()) {
+            firstName = courseUsers.get().getFirstName();
+        }
     }
 }

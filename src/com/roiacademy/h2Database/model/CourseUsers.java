@@ -1,12 +1,22 @@
 package com.roiacademy.h2Database.model;
 
-public class CourseUsers {
+import java.sql.ResultSet;
+
+public class CourseUsers implements BaseModel<CourseUsers> {
     private int id;
     private String firstName;
     private String lastName;
     private int age;
+    //private UserType userType;
 
-    public CourseUsers() {
+    public CourseUsers(int id, String firstName, String lastName, int age) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName =lastName;
+        this.age = age;
+    }
+
+    public CourseUsers () {
 
     }
 
@@ -42,9 +52,15 @@ public class CourseUsers {
     public String toString() {
         return "CourseUsers{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", firstName=" + firstName +
+                ", lastName=" + lastName +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public CourseUsers mapToObject(ResultSet rs) {
+
+        return null;
     }
 }
